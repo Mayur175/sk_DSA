@@ -1,0 +1,11 @@
+Project: main.o function.o trigfuns.o
+	cc -c *.c -lm -lncurses
+
+main.o: main.c math.h cal.h ncurses.h
+	cc -Wall -c main.c
+
+function.o: function.c ncurses.h math.h string.h ctype.h cal.h
+	cc -Wall -c function.c
+
+trigfuns.o: cal.h ncurses.h
+	cc -Wall -c trigfuns.c
